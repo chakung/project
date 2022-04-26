@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>Project</title>
+  <meta name="title" content"Project">
+  <meta name="description" content"Law & Policing">
+  <style>
+    button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }
+  </style>
+</head>
+<body>
+  <button id="btnSend" onclick="sendMessage()">Send product</button>
+  <button id="btnShare" onclick="sendShare()">Share product</button>
+  <button id="btnLogin" onclick="liff.login()">Log In</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    const liffId = "";
+    const contents = {
+      "type": "bubble",
+      "header": {
+        "type": "box",
+        "layout": "horizontal",
+        "backgroundColor": "#518EF9FF",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Project - Law & Policing",
+            "weight": "bold",
+            "size": "sm",
+            "color": "#FFFFFFFF",
+            "contents": []
+          }
+        ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://officemanner.com/wp-content/uploads/2015/06/google-drive.jpg",
+        "size": "lg",
+        "aspectRatio": "1:1",
+        "action": {
+          "type": "uri",
+          "label": "Action",
+          "uri": "https://drive.google.com/drive/folders/15DcHkPVSwTUMKMko0FcgoW8H72ItmIO6?usp=sharing"
+        }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "xl",
+        "backgroundColor": "#518EF9",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "vertical",
+                "flex": 1,
+                "spacing": "xl",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "UDI",
+                    "color": "#FFFFFFFF",
+                    "contents": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Flow",
+                    "color": "#FFFFFFFF",
+                    "offsetTop": "8px",
+                    "contents": []
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "flex": 2,
+                "spacing": "md",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "Usecase Diagram & Details",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 1,
+                    "gravity": "top",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://drive.google.com/file/d/1_W6sdTSxs3wMexzSKxal4QWZWgyXFOT9/view?usp=sharing"
+                    },
+                    "contents": []
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Activity Diagram",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 2,
+                    "gravity": "center",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://drive.google.com/file/d/18dDAHNYIcQpwkq-n9_Rqo82OhkHODLAg/view?usp=sharing"
+                    },
+                    "contents": []
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Checklist",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 2,
+                    "gravity": "center",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://docs.google.com/spreadsheets/d/1yRQx2WPMMoSs0W8_Frb5L4qAZ4kMdZVfYlQPy1EkQcI/edit?usp=sharing"
+                    },
+                    "contents": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "vertical",
+                "flex": 1,
+                "spacing": "xl",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "Sitemap",
+                    "color": "#FFFFFFFF",
+                    "offsetTop": "62px",
+                    "contents": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Icon",
+                    "color": "#FFFFFFFF",
+                    "offsetTop": "150px",
+                    "contents": []
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "flex": 2,
+                "spacing": "lg",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "Sitemap_Web (frontend)",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 1,
+                    "gravity": "top",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://drive.google.com/file/d/1_LE0NK4vAnyviWDeaW8TymUojxFhYtrG/view?usp=sharing"
+                    },
+                    "contents": []
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Sitemap_Web (backend)",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 2,
+                    "gravity": "center",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://drive.google.com/file/d/1Hab4yhIwygOxLhlTiH-P76SmnzGZJOKo/view?usp=sharing"
+                    },
+                    "contents": []
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Sitemap_Mobile (ผู้ให้คำปรึกษา)",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 3,
+                    "gravity": "center",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://drive.google.com/file/d/1NVrT2y-MhP3GVHJ0Re6a-2L-1YtoU0Vm/view?usp=sharing"
+                    },
+                    "contents": []
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Sitemap_Mobile (ผู้รับคำปรึกษา)",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 4,
+                    "gravity": "bottom",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://drive.google.com/file/d/160mdHAvo-KLEDQ-qEHeb8nYLzyXeu6AT/view?usp=sharing"
+                    },
+                    "contents": []
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Web (frontend, backend)",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 5,
+                    "gravity": "bottom",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://drive.google.com/drive/folders/1VHUbHSkUnbDX3Ed9TvefbBxD-BsOSEjD?usp=sharing"
+                    },
+                    "contents": []
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Mobile",
+                    "size": "xs",
+                    "color": "#FFFFFFFF",
+                    "flex": 6,
+                    "gravity": "bottom",
+                    "action": {
+                      "type": "uri",
+                      "uri": "https://drive.google.com/drive/folders/1b9cgtEPA2gUInK-uxb2whmzSngwVL_P2?usp=sharing"
+                    },
+                    "contents": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Internal Meeting",
+              "uri": "http://meet.google.com/uyu-zrsv-igb"
+            }
+          }
+        ]
+      }
+    };
+    function getContexts() {
+      return {
+        type: 'flex',
+        altText: 'Project',
+        contents
+      }
+    }
+    async function sendMessage() {
+      let flex = getContexts();
+      await liff.sendMessages([flex]);
+      liff.closeWindow();
+    }
+    async function sendShare() {
+      let flex = getContexts();
+      const result = await liff.shareTargetPicker([flex])
+      if (result) {
+        alert(`[${result.status}] Message sent!`)
+      } else {
+        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
+
+        if (minorVer === undefined) {
+          alert('ShareTargetPicker was canceled in external browser')
+          return
+        }
+
+        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
+          alert('ShareTargetPicker was canceled in LINE app')
+        }
+      }
+      liff.closeWindow();
+    }
+    function logOut() {
+      liff.logout()
+      window.location.reload()
+    }
+    async function main() {
+      await liff.init({ liffId })
+      if (liff.isLoggedIn()) {
+        await sendMessage()
+        document.getElementById("btnSend").style.display = "block"
+        document.getElementById("btnShare").style.display = "block"
+        if (!liff.isInClient()) {
+          document.getElementById("btnLogOut").style.display = "block"
+        }
+      } else {
+        document.getElementById("btnLogin").style.display = "block"
+      }
+    }
+    main()
+  </script>
+</body>
+</html>
